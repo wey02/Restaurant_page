@@ -1,0 +1,20 @@
+header{
+    background-color: #854d0e;
+    padding: 1rem;
+    
+
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button{
+    padding: 1rem;
+    color: white;
+    background-color: #b45309;
+    border: none;
+}
