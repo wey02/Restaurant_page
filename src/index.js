@@ -1,29 +1,34 @@
 import { homepage } from "./Home";
 import { menu } from "./Menu";
+import { aboutPage } from "./about";
 import './index.css';
+
 
 function modules () {
     
     const content = document.getElementById('content');
-    const homeBtn = document.getElementById('home');
-    const menuBtn = document.getElementById('menu');
+    const buttons = [
+        { btn: document.getElementById('home'), module: homepage },
+        { btn: document.getElementById('menu'), module: menu },
+        { btn: document.getElementById('about'), module: aboutPage }
+    ];
 
-    const homeModule = () =>{
-        content.appendChild(homepage());
-    };
+    const renderModules = () =>{
+        buttons.forEach(({btn, module}) => {
+        
+            btn.addEventListener('click', ()=>{
+                content.innerHTML = '';
+                content.appendChild(module());
+            })
+        });
 
-    const menuModule = () =>{
-        content.appendChild(menu());
+   
+
+     return content.appendChild(homepage());;
     }
 
-    homeBtn.addEventListener('click', ()=>{
-        
-    })
+    renderModules();
     
-    homeModule();
-    menuModule();
-
-    return content;
 
 }
 

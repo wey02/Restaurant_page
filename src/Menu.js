@@ -4,10 +4,12 @@ import solo from './solo.jpg';
 import ulam from './ulam.jpg';
 import combo from './combo.jpg';
 import comboRice from './comboRice.jpg';
+import './menu.css';
 
 const menu = () =>{
 
     const menuContent = document.createElement('div');
+    menuContent.className = 'menu'
 
     const restoMenu = 
     {

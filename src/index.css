@@ -17,4 +17,10 @@ button{
     color: white;
     background-color: #b45309;
     border: none;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: #f59e0b;
+    transform: scale(0.98); 
 }
